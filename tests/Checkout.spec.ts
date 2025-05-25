@@ -10,7 +10,7 @@ test.describe('Checkout Page', () => {
   let loginPage: LoginPage;
   let checkoutPage: CheckoutPage;
 
-  test.beforeEach(async ({ browser }) => {
+  test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
     await page.goto(process.env.BASE_URL!);
 
@@ -65,7 +65,7 @@ test.describe('Checkout Page', () => {
     await page.pause();
   });
 
-  test.afterEach(async () => {
+  test.afterAll(async () => {
     await page.close();
   });
 });

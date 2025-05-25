@@ -7,7 +7,7 @@ dotenv.config();
 test.describe('Login Page', () => {
   let page: any;
   let loginPage: LoginPage;
-  test.beforeEach(async ({ browser }) => {
+  test.beforeAll(async ({ browser }) => {
     const URL = process.env.BASE_URL;
     page = await browser.newPage();
     loginPage = new LoginPage(page);
@@ -38,7 +38,7 @@ test.describe('Login Page', () => {
     await loginPage.login(username, password);
 });
 
-  test.afterEach(async () => {
+  test.afterAll(async () => {
     await page.close();
   });
 });

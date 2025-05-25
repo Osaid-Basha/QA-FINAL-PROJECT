@@ -7,7 +7,7 @@ test.describe('logout', () => {
    let page: any;
   let loginPage: LoginPage;
 
-  test.beforeEach(async ({ browser }) => {
+  test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
     await page.goto(process.env.BASE_URL!);
 
@@ -34,7 +34,7 @@ test.describe('logout', () => {
         const loginPageTitle = await page.title();
         expect(loginPageTitle).toBe('Swag Labs');
     });
-     test.afterEach(async () => {
+     test.afterAll(async () => {
     await page.close();
   });
 })

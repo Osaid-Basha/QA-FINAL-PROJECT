@@ -10,7 +10,7 @@ test.describe('Sort Feature with POM', () => {
   let loginPage: LoginPage;
   let sortPage: SortPage;
 
-  test.beforeEach(async ({ browser }) => {
+  test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
     await page.goto(process.env.BASE_URL!);
 
@@ -62,7 +62,7 @@ test.describe('Sort Feature with POM', () => {
     expect(prices).toEqual(sorted);
   });
 
-  test.afterEach(async () => {
+  test.afterAll(async () => {
     await page.close();
   });
 });
