@@ -25,6 +25,7 @@ test.describe('Login Page', () => {
     await page.pause();
 
     await loginPage.login(username, password);
+    
 
     
   });
@@ -36,6 +37,7 @@ test.describe('Login Page', () => {
     }
      await page.pause();
     await loginPage.login(username, password);
+    const errorMessage = await page.locator('.error-message-container').textContent();
 });
 
   test.afterAll(async () => {
