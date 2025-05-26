@@ -34,7 +34,7 @@ test.describe('logout', () => {
         const loginPageTitle = await page.title();
         expect(loginPageTitle).toBe('Swag Labs');
     });
-     test.afterAll(async () => {
+     test.afterEach(async () => {
     await page.close();
   });
 })

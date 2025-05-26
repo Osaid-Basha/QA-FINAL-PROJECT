@@ -65,7 +65,7 @@ test.describe('Checkout Page', () => {
     await page.pause();
   });
 
-  test.afterAll(async () => {
+  test.afterEach(async () => {
     await page.close();
   });
 });

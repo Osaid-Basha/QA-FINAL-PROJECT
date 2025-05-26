@@ -45,7 +45,7 @@ test.describe('Remove from cart', () => {
 });
 
 
-  test.afterAll(async () => {
+  test.afterEach(async () => {
     await page.close();
   });
 });

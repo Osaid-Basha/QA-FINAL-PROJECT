@@ -62,7 +62,7 @@ test.describe('Sort Feature with POM', () => {
     expect(prices).toEqual(sorted);
   });
 
-  test.afterAll(async () => {
+  test.afterEach(async () => {
     await page.close();
   });
 });

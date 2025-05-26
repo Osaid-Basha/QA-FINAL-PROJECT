@@ -30,7 +30,7 @@ test.describe('Add to cart', () => {
   });
   
 
-  test.afterAll(async () => {
+  test.afterEach(async () => {
     await page.close();
   });
 });

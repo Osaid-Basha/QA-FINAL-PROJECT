@@ -40,7 +40,7 @@ test.describe('Login Page', () => {
     const errorMessage = await page.locator('.error-message-container').textContent();
 });
 
-  test.afterAll(async () => {
+  test.afterEach(async () => {
     await page.close();
   });
 });
